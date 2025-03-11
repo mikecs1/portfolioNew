@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Add favicon link here -->
+    <link rel="icon" type="image/png" href="icon.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add a link to font-awesome for the icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        // Function to set random images for different sections
+        function setRandomImage(sectionId, imageArray) {
+            // Select a random image from the array
+            const randomIndex = Math.floor(Math.random() * imageArray.length);
+            const randomImage = imageArray[randomIndex];
+
+            // Set the 'src' attribute of the image element for the specified section
+            document.getElementById(sectionId).src = randomImage;
+        }
+
+        // Call the random image function on load for each section
+        function setAllRandomImages() {
+            // Define arrays of images for each section
+            const codeImages = [
+                "C:/Users/Mihnea/Desktop/portfolio/code1e.png",
+                "C:/Users/Mihnea/Desktop/portfolio/code2e.png"
+            ];
+
+            const graphicsImages = [
+                 "C:/Users/Mihnea/Desktop/portfolio/3e.png",
+                "C:/Users/Mihnea/Desktop/portfolio/3e.png",
+				"C:/Users/Mihnea/Desktop/portfolio/1e.png"
+            ];
+
+            const aboutImages = [
+                "C:/Users/Mihnea/Desktop/portfolio/poza1e.png",
+                /*"C:/Users/Mihnea/Desktop/poza2.jpg"*/
+            ];
+
+            // Set random images for each section
+            setRandomImage('codeImage', codeImages);
+            setRandomImage('graphicsImage', graphicsImages);
+            setRandomImage('aboutImage', aboutImages);
+        }
+    </script>
+</head>
+<body onload="setAllRandomImages()">
+    <!-- Social Media Bar -->
+    <div1 class="social-bar">
+        <a href="https://web.facebook.com/michaelstephan05" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/mihnea18stefan/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/mikecs1" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mihnea-ciubotariu-4a250a1aa/" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div1>
+
+    <header>
+        <!--<img src="C:\\Users\\Mihnea\\Desktop\\portfolio\\home page\\tet.png" alt="My Logo" class="header-image"-->
+    </header>
+    
+    <!-- Main Section with Image Links -->
+    <div class="grid-container">
+        <a href="codepage/codepage.html" class="grid-item" id="code">
+            <img src="" alt="Code Section" id="codeImage">
+            <!-- <div class="overlay">Code Projects</div> -->
+        </a>
+        <a href="graphics.html" class="grid-item" id="graphics">
+            <img src="" alt="Graphics Section" id="graphicsImage">
+            <!-- <div class="overlay">Graphics Work</div> -->
+        </a>
+        <a href="about page/About.html" class="grid-item" id="about">
+            <img src="" alt="About Me" id="aboutImage">
+            <!-- <div class="overlay">About Me</div> -->
+        </a>
+    </div>
+
+    <!-- Footer 
+    <footer>
+        <p>Connect with me: <a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
+    </footer>-->
+</body>
+</html>
